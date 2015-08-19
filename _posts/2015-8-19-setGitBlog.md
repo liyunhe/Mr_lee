@@ -6,22 +6,23 @@ tags: [sample post]
 image:
   background: triangular.png
 ---
+
 如果想有自己的专属博客在这里 推荐你可以gitHubPages+jekyll 来生成，jekyll 理解成简单静态博客网站生成器.
 我们要做一些准备工作(以mac平台为例).
-# 1.检查一下mac有没有安装ruby(mac默认是安装的)
+# 1检查一下mac有没有安装ruby(mac默认是安装的)
 {% highlight yaml %}
 $ruby -v
 ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
 {% endhighlight %}
 我的已经安装，如果没有安装请安装
-# 2.安装 Homebrew(网上有好多例子)
+# 2安装 Homebrew(网上有好多例子)
 安装完成后检查一下有没有安装成功
 {% highlight yaml %}
 $brew -v
 Homebrew 0.9.5
 {% endhighlight %}
 这代表已经成功
-# 3. 安装 jekyll
+# 3安装 jekyll
 {% highlight yaml %}
 $brew install jekyll
 Homebrew 0.9.5
