@@ -7,7 +7,7 @@ image:
   background: triangular.png
 ---
 如果想有自己的专属博客在这里 推荐你可以gitHubPages+jekyll 来生成，jekyll 理解成简单静态博客网站生成器.
-我们要做一些准备工作(以mac平台为例)
+我们要做一些准备工作(以mac平台为例).
 # 1.检查一下mac有没有安装ruby(mac默认是安装的)
 {% highlight yaml %}
 $ruby -v
