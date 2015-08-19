@@ -3,7 +3,7 @@ description:      Describe your website here.
 disqus_shortname: hpstrtheme
 reading_time:     true
 words_per_minute: 200
-url:              //liyunhe.github.io
+url:              liyunhe/Mr_lee
 
 # Owner/author information
 owner:
@@ -12,9 +12,9 @@ owner:
   bio:            "做一个懂生活的程序员！！"
   email:          "759943432@qq.com"
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        mmistakes
+  twitter:        
   facebook:       
-  github:         mmistakes
+  github:         https://github.com/liyunhe
   stackexchange:  
   linkedin:       
   instagram:        
