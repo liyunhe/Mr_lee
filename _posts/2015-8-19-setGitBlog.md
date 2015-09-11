@@ -4,7 +4,7 @@ title: gitHub 设置自己的专属博客
 description: "你要有一个与众不同的博客"
 tags: [sample post]
 image:
-  background: triangular.png
+background: triangular.png
 ---
 
 ## 如果想有自己的专属博客在这里推荐你可以gitHubPages+jekyll来生成,jekyll理解成简单静态博客网站生成器.我们要做一些准备工作(以mac平台为例).
