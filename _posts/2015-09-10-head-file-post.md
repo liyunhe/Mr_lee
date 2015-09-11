@@ -77,4 +77,6 @@ OK！！ 这样的确完成了我们的需求，但是存在一个问题:在编�
 
 1.除非却又必要，否侧不要引入头文件，一般来说，应在某个类的头文件中使用向前声明来提起别的类，并在实现文件中引用引用那些头文件，这样做可以尽量降低类之间的耦合。
 2.有时无法使用向前声明，比如要声明某个类遵循一项协议。这种情况下，尽量把该类遵循这个协议的申明转移到分类中进行，最后不行，就把协议单独放在一个头文件中，然后使用！
+
+
 <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
