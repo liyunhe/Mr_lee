@@ -1,7 +1,7 @@
 ---
 layout: post
-title: gitHub 编写高效率的IOS代码之在类的头文件中尽量少引用其他的头文件
-description: "《编写高质量的ios代码52个有效发法》读书心得"
+title: gitHub 编写高效率的IOS代码
+description: "《编写高质量的ios代码52个有效发法》之在类的头文件中尽量少引用其他的头文件心得"
 tags: [sample post]
 image:
 background: triangular.png
