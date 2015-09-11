@@ -35,7 +35,8 @@ background: triangular.png
 @property(nonatomic,strong)TwoClass *two_obj;
 @end
 {% endhighlight %}
-OK！！ 这样的确完成了我们的需求，但是存在一个问题：在编译一个使用`<OneClass>`文件时，我们不用知道`<TwoClass>`的全部细节，我们只要知道有以类名叫`<TwoClass>`存在就好了！SO！！有一个办法可以将这种情况告诉编译器：
+OK！！ 这样的确完成了我们的需求，但是存在一个问题:在编译一个使用`<OneClass>`文件时，我们不用知道`<TwoClass>`的全部细节，我们只要知道有以类名叫`<TwoClass>`存在就好了！SO！！有一个办法可以将这种情况告诉编译器:
+
 {% highlight yaml %}
 //OneClass.h
 
@@ -57,9 +58,11 @@ OK！！ 这样的确完成了我们的需求，但是存在一个问题：在�
 @implementation OneClass
 @end
 {% endhighlight %}
+
 	将引用头文件的时间尽量延后，只在确有需要的时候在引用，这样就可以减少类的使用者所需要因入头文件的数量，加入把`<TwoClas>`引入到`<OneClass>`的头文件中，那么没引用一次`<OneClass>`就相当与引用
 `<TwoClas>`和`<OneClass>`2个文件，若这种情况持续下去，则要引用许多根本永不到的内容，会增加编译时间。
 	向前声明也解决了2个类相互引用的问题。假如`<TwoClas>`添加新增和删除`<OneClass>`对象的方法。
+
 {% highlight yaml %}
 
 @interface TwoClass : NSObject
@@ -67,8 +70,11 @@ OK！！ 这样的确完成了我们的需求，但是存在一个问题：在�
 -(void)removeObj:(OneClass *)add_obj;
 @end
 {% endhighlight %}
+
 此时，若要编译`<OneClass>`，则编译器必须知道`<TwoClas>`这个类，而要编译器编译`<OneClass>`，则有知道`<TwoClas>`如果在各自的头文件引用对方的头文件，则会导致循环引用，如果使用`<import>`而非`<include>`不会导致死循环，如果使用`<include>`则会死循环，可以测试一下。如果`<TwoClas>`继承`<OneClass>`，这种情况是要在头文件中去声明。
-##要点：
-##1.除非却又必要，否侧不要引入头文件，一般来说，应在某个类的头文件中使用向前声明来提起别的类，并在实现文件中引用引用那些头文件，这样做可以尽量降低类之间的耦合。
-##2.有时无法使用向前声明，比如要声明某个类遵循一项协议。这种情况下，尽量把该类遵循这个协议的申明转移到分类中进行，最后不行，就把协议单独放在一个头文件中，然后使用！
+
+##要点:
+
+1.除非却又必要，否侧不要引入头文件，一般来说，应在某个类的头文件中使用向前声明来提起别的类，并在实现文件中引用引用那些头文件，这样做可以尽量降低类之间的耦合。
+2.有时无法使用向前声明，比如要声明某个类遵循一项协议。这种情况下，尽量把该类遵循这个协议的申明转移到分类中进行，最后不行，就把协议单独放在一个头文件中，然后使用！
 <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
